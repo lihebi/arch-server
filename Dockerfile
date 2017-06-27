@@ -10,7 +10,7 @@ RUN pacman -S --noconfirm emacs
 
 RUN pacman -S --noconfirm git cmake
 # need to install at least a font so that the png file can be outputed
-RUN pacman -S graphviz ttf-dejavu
+RUN pacman -S --noconfirm graphviz ttf-dejavu
 
 # WORKDIR /root
 # need manually perform this because it needs password
