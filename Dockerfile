@@ -5,7 +5,7 @@ RUN pacman -S --noconfirm clang llvm
 RUN pacman -S --noconfirm clang-tools-extra
 RUN pacman -S --noconfirm pugixml gtest r rapidjson boost
 RUN pacman -S --noconfirm python python2
-RUN pacman -S --noconfirm docker
+RUN pacman -S --noconfirm docker docker-compose
 RUN pacman -S --noconfirm emacs
 
 RUN pacman -S --noconfirm git cmake
