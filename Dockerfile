@@ -31,15 +31,16 @@ RUN echo "LANG=en_US.UTF-8" >> /etc/locale.conf
 
 
 
-RUN useradd -m admin
-RUN echo "admin ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/admin && chmod 0440 /etc/sudoers.d/admin
-
-USER admin
-WORKDIR /home/admin
+# RUN useradd -m admin
+# RUN echo "admin ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/admin && chmod 0440 /etc/sudoers.d/admin
+# USER admin
+# WORKDIR /home/admin
 
 # aur
 # RUN git clone https://aur.archlinux.org/rtags-git && cd rtags-git && makepkg -si --noconfirm
 # RUN rm -r rtags-git
+ENV HOME /root
+WORKDIR $HOME
 
 RUN git clone https://github.com/lihebi/emacs.d .emacs.d
 RUN emacs --script .emacs.d/init.el
