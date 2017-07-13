@@ -23,7 +23,7 @@ RUN pacman $PACMAN_OPTIONS -S graphviz ttf-dejavu
 RUN pacman $PACMAN_OPTIONS -S tmux man
 
 
-RUN pacman $PACMAN_OPTIONS wget gradle
+RUN pacman $PACMAN_OPTIONS -S wget gradle
 
 # change the locale
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
