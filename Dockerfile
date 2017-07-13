@@ -22,14 +22,14 @@ RUN pacman $PACMAN_OPTIONS -S graphviz ttf-dejavu
 
 RUN pacman $PACMAN_OPTIONS -S tmux man
 
+
+RUN pacman $PACMAN_OPTIONS wget gradle
+
 # change the locale
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen
 
 RUN echo "LANG=en_US.UTF-8" >> /etc/locale.conf
-
-
-
 
 # RUN useradd -m admin
 # RUN echo "admin ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/admin && chmod 0440 /etc/sudoers.d/admin
